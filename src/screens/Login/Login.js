@@ -16,7 +16,7 @@ export function Login({navigation}) {
     
     function registerNav() {
         resetStates();
-        navigation.navigate("Register");
+        navigation.navigate("RegisterRoute");
     }
 
     async function storage(item) {
@@ -24,7 +24,7 @@ export function Login({navigation}) {
         try{
             await AsyncStorage.setItem("@id", jsonItem);
             resetStates();
-            navigation.navigate("PAYTabNav");
+            navigation.navigate("StackRoutes");
         }
         catch (e){
             console.log("não foi possivel armazenar o usuario");

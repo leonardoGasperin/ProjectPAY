@@ -5,7 +5,7 @@ import anim from '../../JSON/animations/InitialPage.json'
 
 export function Initial({navigation}) {
     function registerNav() {
-        navigation.navigate("Register");
+        navigation.navigate("RegisterRoute");
     }
     function loginNav() {
         navigation.navigate("Login");

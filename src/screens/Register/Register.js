@@ -19,7 +19,7 @@ export function Register({navigation}) {
 
     function backNav() {
         resetStates();
-        navigation.navigate("PAY");
+        navigation.navigate("Initial");
     }
 
     function adressNav(){
@@ -52,7 +52,7 @@ export function Register({navigation}) {
         }else if(chkPsw !== psw){
             alert("As senhas não são iguais");
         }else{
-            navigation.navigate("AdressInf", {usrProfile: {
+            navigation.navigate("AddressInf", {usrProfile: {
                 name: name,
                 phoneN: phoneN,
                 email: email,

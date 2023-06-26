@@ -4,7 +4,7 @@ import { API, ViaCep } from '../../api/api';
 import { Picker } from '@react-native-picker/picker';
 import { commonStyles } from '../../styles/commonStyles';
 
-export function AdressInf({navigation, route}) {
+export function AddressInf({navigation, route}) {
     const {usrProfile} = route.params;
 
     const [cep, setCep] = useState("");
