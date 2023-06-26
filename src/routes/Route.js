@@ -9,17 +9,30 @@ import { Register } from "../screens/Register/Register"
 import { AddressInf } from '../screens/Register/AddressInf';
 import { DateBill } from '../screens/Register/DateBill';
 import { Tos } from '../screens/Register/Tos';
+import { Home } from '../screens/Home/Home';
+import { Bills } from '../screens/Bills/Bills';
+import { Scanner } from '../screens/Scanner/Scanner';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function StackRoutes(){
+function StackRoute(){
     return(
         <Stack.Navigator initialRouteName="Initial">
             <Stack.Screen options={{ headerShown: false }} name="Initial" component={Initial}/>
             <Stack.Screen options={{ headerShown: false }} name="Login" component={Login}/>
             <Stack.Screen options={{ headerShown: false }} name="RegisterRoute" component={RegisterRoute}/>
         </Stack.Navigator>
+    );
+}
+
+function TabRoute(){
+    return(
+        <Tab.Navigator initialRouteName="Home">
+            <Tab.Screen options={{ headerShown: false }} name="Home" component={Home} />
+            <Tab.Screen options={{ headerShown: false }} name="Bills" component={Bills} />
+            <Tab.Screen options={{ headerShown: false }} name="Scanner" component={Scanner} />
+        </Tab.Navigator>
     );
 }
 
@@ -38,7 +51,8 @@ export default function Route() {
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName="StackRoutes">
-            <Stack.Screen options={{ headerShown: false }} name="StackRoutes" component={StackRoutes} />
+            <Stack.Screen options={{ headerShown: false }} name="StackRoutes" component={StackRoute} />
+            <Stack.Screen options={{ headerShown: false }} name="TabRoute" component={TabRoute} />
         </Stack.Navigator>
     </NavigationContainer>
   );
