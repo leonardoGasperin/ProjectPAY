@@ -1,5 +1,87 @@
 {
-  "user": [],
-  "debts": [],
-  "invoices": []
+  "user": [
+    {
+      "usrProfile": {
+        "name": "Leo nar do",
+        "phoneN": "54546496565",
+        "email": "Dvdh@gmail.com",
+        "rg": "6565665656",
+        "cpf": "11111111111",
+        "psw": "abcd1234"
+      },
+      "usrAdress": {
+        "cep": "85867633",
+        "street": "Avenida Tancredo Neves Jardim Itaipu/ Conjunto B/Porto Belo",
+        "city": "Foz do Iguaçu",
+        "uf": "PR",
+        "dist": "Porto Belo",
+        "adNum": "3000",
+        "complement": ""
+      },
+      "date": "2023-06-14",
+      "id": 1
+    }
+  ],
+  "debts": [
+    {
+      "id": 1234534,
+      "amount": 230.23,
+      "recipient": "EDP Energias do Mundo"
+    },
+    {
+      "id": 545434326,
+      "amount": 250,
+      "recipient": "DevInHouse Ltda"
+    },
+    {
+      "id": 545434326,
+      "amount": 250,
+      "recipient": "DevInHouse Ltda"
+    },
+    {
+      "id": 1234,
+      "amount": 250.001,
+      "recipient": "Doces da Tia Matilda"
+    },
+    {
+      "id": 4321,
+      "amount": 1587.93,
+      "recipient": "Castelinho de Queijo Panificadora"
+    }
+  ],
+  "invoices": [
+    {
+      "date": "27 de junho às 15:51",
+      "recipient": "Doces da Tia Matilda",
+      "amount": [
+        "R$ 250,001",
+        "250,001",
+        "R$"
+      ],
+      "user": 1,
+      "id": 1
+    },
+    {
+      "date": "27 de junho às 15:53",
+      "recipient": "EDP Energias do Mundo",
+      "amount": [
+        "R$ 230,23",
+        "230,23",
+        "R$"
+      ],
+      "user": 1,
+      "id": 2
+    },
+    {
+      "date": "27 de junho às 15:54",
+      "recipient": "DevInHouse Ltda",
+      "amount": [
+        "R$ 250",
+        "250",
+        "R$"
+      ],
+      "user": 1,
+      "id": 3
+    }
+  ]
 }
