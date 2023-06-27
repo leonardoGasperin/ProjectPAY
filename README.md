@@ -4,6 +4,23 @@ The application have two pages one for login and other to registry account plus 
 account information and bills registry what have an page to bill details.
 the application use a simple API runnng with Ngrok free server to save records informations in the API.
 ##
+### Installing
+* First need install if you donot have the expo, node.js and npmjs to run well the application, follow the links for documentation
+1. [Expo Doc](https://docs.expo.dev/get-started/installation/)
+2. [npmjs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+3. [Node.js doc](https://nodejs.org/en/download)
+* Now you'll need install the modules for application and dependecies using `npm install`
+* Then install the json-server for your fake API with `npm install -g json-server`
+* Plus you'll need too the ngrok [download here](https://ngrok.com/download)
+### To run it
+* You can use in your terminal or prompt in the project folder and run `npm expo start` or equivalent
+* after you'll need run in other terminal or prompt your json-server using `json-server --watch db.json --port 3000`
+  you can use any port but need be the same on ngrok
+* And now for least you need run the ngrok using `ngrok http 3000` on ngrok terminal.
+
+With all it did you can run the application on your smartphone android or with android studio.
+##
+## Apresentation
 ### Initial
 Is the Initial screen for app, have button to go to login or to registration,
 to login need have an account.
