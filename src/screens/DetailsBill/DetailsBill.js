@@ -56,7 +56,7 @@ export function DetailsBill({navigation, route}) {
         .then(() => {
             alert("Boleto pago com sucesso!");
             setChkPay(true);
-            navigation.navigate("PAYTabNav");
+            navigation.navigate("Bills");
         })
         .catch(() => alert("Erro ao carregar boleto"));
     }
