@@ -12,6 +12,7 @@ import { Tos } from '../screens/Register/Tos';
 import { Home } from '../screens/Home/Home';
 import { Bills } from '../screens/Bills/Bills';
 import { Scanner } from '../screens/Scanner/Scanner';
+import { DetailsBill } from '../screens/DetailsBill/DetailsBill';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -53,6 +54,7 @@ export default function Route() {
         <Stack.Navigator initialRouteName="StackRoutes">
             <Stack.Screen options={{ headerShown: false }} name="StackRoutes" component={StackRoute} />
             <Stack.Screen options={{ headerShown: false }} name="TabRoute" component={TabRoute} />
+            <Stack.Screen options={{ headerShown: false }} name="DetailsBill" component={DetailsBill} />
         </Stack.Navigator>
     </NavigationContainer>
   );
