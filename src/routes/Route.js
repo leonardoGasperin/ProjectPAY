@@ -13,6 +13,8 @@ import { Home } from '../screens/Home/Home';
 import { Bills } from '../screens/Bills/Bills';
 import { Scanner } from '../screens/Scanner/Scanner';
 import { DetailsBill } from '../screens/DetailsBill/DetailsBill';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -24,6 +26,7 @@ function StackRoute(){
                 options={{ headerShown: false }} 
                 name="Initial" 
                 component={Initial}
+                
             />
             <Stack.Screen 
                 options={{ headerShown: false }} 
@@ -43,20 +46,35 @@ function TabRoute(){
     return(
         <Tab.Navigator initialRouteName="Home">
             <Tab.Screen 
-                options={{ headerShown: false }} 
+                options={{ 
+                        headerShown: false,
+                        tabBarLabel: 'Home',
+                        tabBarIcon: () => (
+                            <MaterialCommunityIcons name="home" color="#f90" selectionColor="#f90" size={26}/>
+                        ),
+                    }} 
                 name="Home" 
                 component={Home} 
-                activeColor="#f0edf6"
-                inactiveColor="#3e2465"
-                barStyle={{ backgroundColor: '#694fad' }}
             />
             <Tab.Screen 
-                options={{ headerShown: false }} 
+                options={{ 
+                        headerShown: false,
+                        tabBarLabel: 'Bills',
+                        tabBarIcon: () => (
+                            <Entypo name="text-document" color="#f90" size={26}/>
+                        ),
+                    }} 
                 name="Bills" 
                 component={Bills}
             />
             <Tab.Screen 
-                options={{ headerShown: false }} 
+                options={{ 
+                        headerShown: false,
+                        tabBarLabel: 'Scanner',
+                        tabBarIcon: () => (
+                            <MaterialCommunityIcons name="qrcode-scan" color="#f90" size={26}/>
+                        ),
+                    }} 
                 name="Scanner" 
                 component={Scanner}
             />
