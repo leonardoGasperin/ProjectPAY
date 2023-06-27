@@ -15,3 +15,7 @@ web-build/
 
 # Visual Studio
 .vs/
+
+# Arquivos e diretórios adicionados
+db.json
+src/api/api.js
