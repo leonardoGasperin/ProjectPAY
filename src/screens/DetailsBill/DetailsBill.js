@@ -62,7 +62,7 @@ export function DetailsBill({navigation, route}) {
     }
 
     function cancel() {
-        navigation.navigate("PAYTabNav");
+        navigation.navigate("Scanner");
     }
 
     useEffect(() => {
