@@ -20,9 +20,21 @@ const Tab = createBottomTabNavigator();
 function StackRoute(){
     return(
         <Stack.Navigator initialRouteName="Initial">
-            <Stack.Screen options={{ headerShown: false }} name="Initial" component={Initial}/>
-            <Stack.Screen options={{ headerShown: false }} name="Login" component={Login}/>
-            <Stack.Screen options={{ headerShown: false }} name="RegisterRoute" component={RegisterRoute}/>
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="Initial" 
+                component={Initial}
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="Login" 
+                component={Login}
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="RegisterRoute" 
+                component={RegisterRoute}
+            />
         </Stack.Navigator>
     );
 }
@@ -30,9 +42,24 @@ function StackRoute(){
 function TabRoute(){
     return(
         <Tab.Navigator initialRouteName="Home">
-            <Tab.Screen options={{ headerShown: false }} name="Home" component={Home} />
-            <Tab.Screen options={{ headerShown: false }} name="Bills" component={Bills} />
-            <Tab.Screen options={{ headerShown: false }} name="Scanner" component={Scanner} />
+            <Tab.Screen 
+                options={{ headerShown: false }} 
+                name="Home" 
+                component={Home} 
+                activeColor="#f0edf6"
+                inactiveColor="#3e2465"
+                barStyle={{ backgroundColor: '#694fad' }}
+            />
+            <Tab.Screen 
+                options={{ headerShown: false }} 
+                name="Bills" 
+                component={Bills}
+            />
+            <Tab.Screen 
+                options={{ headerShown: false }} 
+                name="Scanner" 
+                component={Scanner}
+            />
         </Tab.Navigator>
     );
 }
@@ -40,10 +67,26 @@ function TabRoute(){
 function RegisterRoute(){
     return(
         <Stack.Navigator initialRouteName="Register">
-            <Stack.Screen options={{ headerShown: false }} name="Register" component={Register}/>
-            <Stack.Screen options={{ headerShown: false }} name="AddressInf" component={AddressInf}/>
-            <Stack.Screen options={{ headerShown: false }} name="DateBill" component={DateBill}/>
-            <Stack.Screen options={{ headerShown: false }} name="Tos" component={Tos}/>
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="Register" 
+                component={Register}
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="AddressInf" 
+                component={AddressInf}
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="DateBill" 
+                component={DateBill}
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="Tos" 
+                component={Tos}
+            />
         </Stack.Navigator> 
     );  
 }
@@ -52,9 +95,21 @@ export default function Route() {
   return (
     <NavigationContainer>
         <Stack.Navigator initialRouteName="StackRoutes">
-            <Stack.Screen options={{ headerShown: false }} name="StackRoutes" component={StackRoute} />
-            <Stack.Screen options={{ headerShown: false }} name="TabRoute" component={TabRoute} />
-            <Stack.Screen options={{ headerShown: false }} name="DetailsBill" component={DetailsBill} />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="StackRoutes" 
+                component={StackRoute} 
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="TabRoute" 
+                component={TabRoute} 
+            />
+            <Stack.Screen 
+                options={{ headerShown: false }} 
+                name="DetailsBill" 
+                component={DetailsBill} 
+            />
         </Stack.Navigator>
     </NavigationContainer>
   );
