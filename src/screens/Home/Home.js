@@ -32,7 +32,7 @@ export function Home({navigation}) {
   }
 
   function logout() {
-    navigation.navigate("PAY");
+    navigation.navigate("Initial");
   }
 
   useEffect(() => {

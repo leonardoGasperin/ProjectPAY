@@ -10,7 +10,7 @@ export function Login({navigation}) {
     const [users, setUsers] = useState([]);
 
     function resetStates() {
-        setUsers("");
+        setUser("");
         setPsw("");
     }
     
@@ -24,7 +24,7 @@ export function Login({navigation}) {
         try{
             await AsyncStorage.setItem("@id", jsonItem);
             resetStates();
-            navigation.navigate("StackRoutes");
+            navigation.navigate("TabRoute");
         }
         catch (e){
             console.log("não foi possivel armazenar o usuario");
@@ -35,9 +35,12 @@ export function Login({navigation}) {
         let userChk = 0;
         let pswChk = 0;
         let id = 0;
-        if(users != []){
+        if(users.length !== 0){
             users.map((item) => {
                 if(item.usrProfile.cpf == user && userChk == 0){
+                    console.log("ITEM: " + item.usrProfile.cpf)
+                    console.log("LOGIN: " + user)
+                    console.log("CHECAGEM: " + (item.usrProfile.cpf == user))
                     userChk++;
                 }
                 if(item.usrProfile.psw == psw && pswChk == 0){
@@ -61,7 +64,7 @@ export function Login({navigation}) {
         fetch(API + "/user")
         .then(async (response) => {
             const data = await response.json();
-            if(data != ""){
+            if(data.length !== 0){
                 setUsers(data);
             }
         })
